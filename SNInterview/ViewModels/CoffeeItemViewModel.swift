@@ -8,8 +8,8 @@
 
 import Foundation
 
-///PdfViewController class subclass of UIViewController
-/// - Description : PdfViewController Displays the PDF files in PDF Viewer/
+///CoffeeItemViewModel class subclass of NSObject
+/// - Description : CoffeeItemViewModel fetches the json data from local file, parse the response the stores the data in Model object. Returns no of rows and Returns Items at index. Makes API call to fetch data from server using URLSession.;
 class CoffeeItemViewModel {
     
     var apiHandler = ApiHandler()
@@ -40,7 +40,7 @@ class CoffeeItemViewModel {
         let patient = dataSourceArray[atIndex]
         return patient
     }
-    //
+    // Private function to parse the Json data.
     private func parseJson(jsonData: Data) {
         if let object = try? JSONSerialization.jsonObject(with: jsonData) {
             if let jsonData = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted])
