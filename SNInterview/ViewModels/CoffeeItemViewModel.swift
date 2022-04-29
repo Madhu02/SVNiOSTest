@@ -20,6 +20,17 @@ class CoffeeItemViewModel {
             self.parseJson(jsonData: localData)
         }
     }
+    
+    func MakeApiCall(){
+        apiHandler.loadDataFromApi(fromURLString: "") { result in
+            switch result {
+            case .success(let data):
+                self.parseJson(jsonData: data)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     //Returns Coffee Items Count
     func getNoOfRowsForSection() -> Int {
         return dataSourceArray.count

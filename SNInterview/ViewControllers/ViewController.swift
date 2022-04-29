@@ -53,6 +53,8 @@ class ViewController: UIViewController {
         
         delegate = CoffeeShopDetailsHandler()
         */
+        
+        //viewModel.MakeApiCall() Uncomment this line to make API call
         viewModel.fetchData()
     }
     
