@@ -8,6 +8,9 @@
 
 import Foundation
 
+///CoffeeItemModel struct subclass of Decodable
+/// - Description : decode the json and maps the data to the variables
+
 struct CoffeeItemModel: Decodable {
     var itemName: String?
     var itemComments:String?

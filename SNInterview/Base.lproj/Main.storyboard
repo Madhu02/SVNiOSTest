@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1781" y="702"/>
+            <point key="canvasLocation" x="1955" y="143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MJa-tv-hQK">
@@ -87,7 +87,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Ratings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oex-K9-HK6">
-                                                            <rect key="frame" x="3" y="47" width="95" height="20"/>
+                                                            <rect key="frame" x="3" y="47" width="95" height="20.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="dgv-dN-abt"/>
                                                             </constraints>
@@ -95,11 +95,8 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Item Comments Item Comments Item Comments Item Comments Item Comments Item Comments" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBU-Op-Bei">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Item Comments Item Comments Item Comments Item Comments Item Comments Item Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBU-Op-Bei">
                                                             <rect key="frame" x="3" y="25" width="388" height="20.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="ZL2-2c-cSe"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -108,7 +105,6 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="Oex-K9-HK6" firstAttribute="top" secondItem="eBU-Op-Bei" secondAttribute="bottom" constant="1.5" id="3AW-N3-pAc"/>
-                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Oex-K9-HK6" secondAttribute="bottom" constant="3" id="Ep8-Q5-b2P"/>
                                                         <constraint firstAttribute="trailing" secondItem="eBU-Op-Bei" secondAttribute="trailing" constant="3" id="FfG-Ae-AM3"/>
                                                         <constraint firstItem="eBU-Op-Bei" firstAttribute="top" secondItem="MiW-Do-zgU" secondAttribute="bottom" constant="1.5" id="ISL-v1-SqL"/>
                                                         <constraint firstItem="Oex-K9-HK6" firstAttribute="top" secondItem="eBU-Op-Bei" secondAttribute="bottom" constant="1.5" id="JWl-rT-HJD"/>
@@ -152,11 +148,48 @@
                     <navigationItem key="navigationItem" title="Coffee Shops ☕️" id="RPS-eV-mQp"/>
                     <connections>
                         <outlet property="itemTableView" destination="IgJ-Je-9Sh" id="dcj-Zq-57Y"/>
+                        <segue destination="LQk-7x-mvI" kind="show" id="z5v-pr-Cac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Art-CH-fhG" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="717" y="953"/>
+        </scene>
+        <!--Detai View Controller-->
+        <scene sceneID="MXd-PC-asT">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="LQk-7x-mvI" customClass="DetaiViewController" customModule="SNInterview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K2z-5A-FSp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="coffeeItemObject" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-Ua-SqA">
+                                <rect key="frame" x="20" y="88" width="395" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="BZE-uL-GFi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5df-zY-XDb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hcv-Ua-SqA" firstAttribute="top" secondItem="5df-zY-XDb" secondAttribute="top" id="PGN-6a-YD7"/>
+                            <constraint firstItem="Hcv-Ua-SqA" firstAttribute="trailing" secondItem="5df-zY-XDb" secondAttribute="trailing" constant="1" id="XP3-pZ-ZQy"/>
+                            <constraint firstItem="Hcv-Ua-SqA" firstAttribute="leading" secondItem="5df-zY-XDb" secondAttribute="leading" constant="20" id="hWd-f7-ra6"/>
+                            <constraint firstItem="Hcv-Ua-SqA" firstAttribute="top" secondItem="5df-zY-XDb" secondAttribute="top" id="wje-4d-xpe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="24f-ia-yw9"/>
+                    <connections>
+                        <outlet property="commentsLabel" destination="Hcv-Ua-SqA" id="aiO-Iw-m3a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PtJ-4F-MGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2263.768115942029" y="975"/>
         </scene>
     </scenes>
     <resources>

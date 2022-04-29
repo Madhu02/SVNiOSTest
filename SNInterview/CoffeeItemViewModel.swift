@@ -8,6 +8,8 @@
 
 import Foundation
 
+///PdfViewController class subclass of UIViewController
+/// - Description : PdfViewController Displays the PDF files in PDF Viewer/
 class CoffeeItemViewModel {
     
     var apiHandler = ApiHandler()
@@ -18,15 +20,16 @@ class CoffeeItemViewModel {
             self.parseJson(jsonData: localData)
         }
     }
-    //Returns PatientsList Count
+    //Returns Coffee Items Count
     func getNoOfRowsForSection() -> Int {
         return dataSourceArray.count
     }
-    //Returns Patient Data Filtered and Un-filtered.
-    func getPatientAtIndex(atIndex: Int) -> CoffeeItemModel {
+    //Returns Coffee Item
+    func getCoffeeItem(atIndex: Int) -> CoffeeItemModel {
         let patient = dataSourceArray[atIndex]
         return patient
     }
+    //
     private func parseJson(jsonData: Data) {
         if let object = try? JSONSerialization.jsonObject(with: jsonData) {
             if let jsonData = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted])
@@ -41,7 +44,6 @@ class CoffeeItemViewModel {
                 }
             }
         }
-        
         
     }
     

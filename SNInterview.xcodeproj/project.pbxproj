@@ -22,6 +22,8 @@
 		C278A904281AB5FB0007EBF7 /* CoffeeItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278A903281AB5FB0007EBF7 /* CoffeeItemModel.swift */; };
 		C278A906281AB7190007EBF7 /* CoffeeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278A905281AB7190007EBF7 /* CoffeeItemViewModel.swift */; };
 		C278A908281AB7F10007EBF7 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278A907281AB7F10007EBF7 /* ApiHandler.swift */; };
+		C278A90A281BA14F0007EBF7 /* DetaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278A909281BA14F0007EBF7 /* DetaiViewController.swift */; };
+		C278A90C281BAF7A0007EBF7 /* CoffeeCommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278A90B281BAF7A0007EBF7 /* CoffeeCommentsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		C278A903281AB5FB0007EBF7 /* CoffeeItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItemModel.swift; sourceTree = "<group>"; };
 		C278A905281AB7190007EBF7 /* CoffeeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItemViewModel.swift; sourceTree = "<group>"; };
 		C278A907281AB7F10007EBF7 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
+		C278A909281BA14F0007EBF7 /* DetaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaiViewController.swift; sourceTree = "<group>"; };
+		C278A90B281BAF7A0007EBF7 /* CoffeeCommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCommentsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 				C278A901281AA8C70007EBF7 /* CoffeeItemTVC.swift */,
 				576E9C68234E7B9900199B25 /* AppDelegate.swift */,
 				576E9C6A234E7B9900199B25 /* ViewController.swift */,
+				C278A909281BA14F0007EBF7 /* DetaiViewController.swift */,
 				576E9C8C234EF29E00199B25 /* CoffeeShopItemView.swift */,
 				576E9C8A234EF0D800199B25 /* CoffeeShopItemView.xib */,
 				576E9C8E234EF35F00199B25 /* UIView+Additions.swift */,
@@ -109,6 +114,7 @@
 				576E9C74234E7B9C00199B25 /* Info.plist */,
 				C278A903281AB5FB0007EBF7 /* CoffeeItemModel.swift */,
 				C278A905281AB7190007EBF7 /* CoffeeItemViewModel.swift */,
+				C278A90B281BAF7A0007EBF7 /* CoffeeCommentsViewModel.swift */,
 				C278A907281AB7F10007EBF7 /* ApiHandler.swift */,
 			);
 			path = SNInterview;
@@ -227,11 +233,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C278A90C281BAF7A0007EBF7 /* CoffeeCommentsViewModel.swift in Sources */,
 				C278A904281AB5FB0007EBF7 /* CoffeeItemModel.swift in Sources */,
 				576E9C8F234EF35F00199B25 /* UIView+Additions.swift in Sources */,
 				C278A906281AB7190007EBF7 /* CoffeeItemViewModel.swift in Sources */,
 				C278A908281AB7F10007EBF7 /* ApiHandler.swift in Sources */,
 				C278A902281AA8C80007EBF7 /* CoffeeItemTVC.swift in Sources */,
+				C278A90A281BA14F0007EBF7 /* DetaiViewController.swift in Sources */,
 				576E9C6B234E7B9900199B25 /* ViewController.swift in Sources */,
 				576E9C69234E7B9900199B25 /* AppDelegate.swift in Sources */,
 				576E9C8D234EF29E00199B25 /* CoffeeShopItemView.swift in Sources */,
