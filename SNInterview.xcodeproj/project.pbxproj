@@ -100,10 +100,11 @@
 		576E9C67234E7B9900199B25 /* SNInterview */ = {
 			isa = PBXGroup;
 			children = (
-				C278A901281AA8C70007EBF7 /* CoffeeItemTVC.swift */,
 				576E9C68234E7B9900199B25 /* AppDelegate.swift */,
-				576E9C6A234E7B9900199B25 /* ViewController.swift */,
-				C278A909281BA14F0007EBF7 /* DetaiViewController.swift */,
+				C278A910281BBA560007EBF7 /* ViewControllers */,
+				C278A90E281BBA380007EBF7 /* Models */,
+				C278A90D281BBA210007EBF7 /* ViewModels */,
+				C278A901281AA8C70007EBF7 /* CoffeeItemTVC.swift */,
 				576E9C8C234EF29E00199B25 /* CoffeeShopItemView.swift */,
 				576E9C8A234EF0D800199B25 /* CoffeeShopItemView.xib */,
 				576E9C8E234EF35F00199B25 /* UIView+Additions.swift */,
@@ -112,10 +113,6 @@
 				576E9C6F234E7B9C00199B25 /* Assets.xcassets */,
 				576E9C71234E7B9C00199B25 /* LaunchScreen.storyboard */,
 				576E9C74234E7B9C00199B25 /* Info.plist */,
-				C278A903281AB5FB0007EBF7 /* CoffeeItemModel.swift */,
-				C278A905281AB7190007EBF7 /* CoffeeItemViewModel.swift */,
-				C278A90B281BAF7A0007EBF7 /* CoffeeCommentsViewModel.swift */,
-				C278A907281AB7F10007EBF7 /* ApiHandler.swift */,
 			);
 			path = SNInterview;
 			sourceTree = "<group>";
@@ -127,6 +124,33 @@
 				576E9C7F234E7B9C00199B25 /* Info.plist */,
 			);
 			path = SNInterviewTests;
+			sourceTree = "<group>";
+		};
+		C278A90D281BBA210007EBF7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C278A905281AB7190007EBF7 /* CoffeeItemViewModel.swift */,
+				C278A90B281BAF7A0007EBF7 /* CoffeeCommentsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C278A90E281BBA380007EBF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C278A903281AB5FB0007EBF7 /* CoffeeItemModel.swift */,
+				C278A907281AB7F10007EBF7 /* ApiHandler.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C278A910281BBA560007EBF7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				576E9C6A234E7B9900199B25 /* ViewController.swift */,
+				C278A909281BA14F0007EBF7 /* DetaiViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
