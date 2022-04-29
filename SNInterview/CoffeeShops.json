@@ -22,5 +22,15 @@
     "name": "Better Buzz Coffee",
     "review": "This coffee shop is really cute. The decor is beautiful, food and coffee is tasty and the service is friendly and quick.",
     "rating": 5
+},
+{
+    "name": "Bird Rock",
+    "review": "When it comes to environment and ambience, this place is amazing! It has a cute lil look, yet looks a bit modern. It's very eye appealing and I would definitely deem Instagramable.",
+    "rating": 3
+},
+{
+    "name": "Better Buzz Coffee",
+    "review": "This coffee shop is really cute. The decor is beautiful, food and coffee is tasty and the service is friendly and quick.",
+    "rating": 5
 }
 ]

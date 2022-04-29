@@ -19,9 +19,11 @@ protocol CoffeeShopTapDelegate {
 
 class ViewController: UIViewController {
     var delegate: CoffeeShopTapDelegate!
-    
     @IBOutlet private weak var stackView: UIStackView!
-    
+
+    @IBOutlet weak var itemTableView: UITableView!
+    var viewModel = CoffeeItemViewModel()
+
     private let reviews = [
         CoffeeShop(name:"Lofty", review: "Knowledgeable staff, stacked menu. Trust the Ethiopian in a pour over if you know your flavors. Will be back for the rest of this menu soon.", rating: 4),
         CoffeeShop(name:"Zumbar", review: "Came to SD for school tour and heading back to the Bay Area after today's final meeting. Was drinking Starbucks the whole trip until my sis recommended this cafe to me. LOVE IT!", rating: 5),
@@ -33,6 +35,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       /*
         reviews.forEach { coffeeShop in
             guard let containerView = CoffeeShopItemView.fromNib() as? CoffeeShopItemView else {
                 fatalError("Failed loading CoffeeShopItemView")
@@ -46,6 +49,8 @@ class ViewController: UIViewController {
         }
         
         delegate = CoffeeShopDetailsHandler()
+        */
+        viewModel.fetchData()
     }
     
     @objc
@@ -62,3 +67,20 @@ class CoffeeShopDetailsHandler: CoffeeShopTapDelegate {
         print("Item Tapped: \(tapped)")
     }
 }
+extension ViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getNoOfRowsForSection()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CoffeeItemTVC
+        
+        let itemObject = viewModel.getPatientAtIndex(atIndex: indexPath.row)
+        cell.itemNameLabel.text = "Name:\(itemObject.itemName ?? "NA")"
+        cell.itemCommentLabel.text = "Review:\(itemObject.itemComments ?? "NA")"
+        cell.itemRatingLabel.text = "Rating: \(itemObject.itemRating ?? 0)"
+        return cell
+    }
+    
+}
+
